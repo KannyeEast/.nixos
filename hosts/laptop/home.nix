@@ -56,8 +56,6 @@
             imagemagick
 
             pkg-config
-
-            fastfetch
         ];
 
         # State version - don't touch this
