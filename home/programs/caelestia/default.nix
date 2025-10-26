@@ -135,7 +135,7 @@
 
 			dashboard = {
 				enabled = true;
-				showOnHover = true;
+				showOnHover = false;
 				
 				dragThreshold = 50;
 
@@ -183,7 +183,7 @@
 			notifs = {
 				actionOnClick = false;
 				clearThreshold = 0.3;
-				defaultExpireTimeout = 3000;
+				defaultExpireTimeout = 1000;
 				expandThreshold = 20;
 				expire = true;
 			};
@@ -193,8 +193,8 @@
 			};
 
 			paths = {
-				mediaGif = "root:/assets/bongocat.gif";
-				sessionGif = "root:/assets/kurukuru.gif";
+				mediaGif = "h:/assets/bongocat.gif";
+				sessionGif = "../../../assets/pengu.gif";
 				wallpaperDir = "~/Pictures/Wallpapers";
 			};
 

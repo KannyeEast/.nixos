@@ -34,7 +34,8 @@
     prettier     # Code formatter for JS/TS/HTML/CSS
   ];
 
-  # Visual Studio Code
+  # Visual Studio Code 
+  # @TODO Remove once nvim is setup  
   programs.vscode = {
     enable = true;
 

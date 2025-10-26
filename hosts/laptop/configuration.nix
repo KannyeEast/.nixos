@@ -39,5 +39,5 @@
   home-manager.users."${config.var.username}" = import ./home.nix;
 
   # NixOS Version - Don't Change
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }

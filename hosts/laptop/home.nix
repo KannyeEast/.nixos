@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ config, pkgs, inputs, ... }:
 {
     imports = [
         # User Specific Config
@@ -7,16 +7,11 @@
         # System
         ../../home/system/hyprland
         ../../home/system/cursor
-        ../../home/system/fish-shell
         ../../home/system/git
         ../../home/system/development
 
-        # Programs
+        # Programs with configs
 	    ../../home/programs/caelestia
-        ../../home/programs/alacritty
-        ../../home/programs/keepassxc
-        ../../home/programs/zen-browser
-        ../../home/programs/spotify
     ];
 
     home = {
@@ -26,8 +21,11 @@
 
         # Packages
         packages = with pkgs; [
-            # Apps
-            # brave
+            # Programs
+            spotify
+            keepassxc
+            alacritty
+            inputs.zen-browser.packages.${pkgs.system}.default
 
             # Utilities
             grc
@@ -37,33 +35,37 @@
             gtk3
 
             # Shell/Terminal
-            fish
-            zsh
+            # Default shell is set (and installed) in variables.nix
+            # zsh
+
             oh-my-posh
             tmux
+            neovim
 
             fzf
+            bat
+            eza
             tree
             tldr
             stow
             zoxide
 
             # Misc
-            cava
+            #cava
+            #ddcutil
+            #imagemagick
             bluez
-            ddcutil
             brightnessctl
-            imagemagick
 
             pkg-config
         ];
 
         # State version - don't touch this
-        stateVersion = "24.11";
+        stateVersion = "25.05";
     };
 
-    # Enable Home Manager
-    programs.home-manager = {
-        enable = true;
+    programs = {
+        # Enable Home Manager
+        home-manager.enable = true;
     };
 }
